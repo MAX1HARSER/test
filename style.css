@@ -1,0 +1,113 @@
+:root {
+    font-family: Inter, sans-serif;
+    --circle-percent: 33; /*проецент заполнения*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    background: #3579F5;
+    border-radius: 10px;
+    width: 743px;
+    height: 91px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 17px;
+}
+
+.font_l{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+
+    background: #2364DB;
+    border-radius: 10px;
+    width: 76px;
+    height: 18px;
+    padding-left: 3px;
+    margin-top: 5px;
+}
+
+.font_m{
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+}
+
+.font_xl{
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: white;
+    margin-top: 7px;
+}
+
+.button{
+    border: none;
+    background: #F4F8FF;
+    width: 170px;
+    height: 40px;
+    padding: 10px 32px 10px 32px;
+    gap: 10px;
+    border-radius: 6px;
+    opacity: 10;
+
+    white-space: nowrap;
+    color: #4777ED;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-align: left;
+    margin-left: 60px;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+.circular-progress {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+    background: conic-gradient(rgba(255,255,255, 1), calc(var(--circle-percent) * 360deg / 100), rgba(255,255,255, 0) 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    border-radius: 50%;
+    background-color: #3579F5;
+}
+
+.text-progress{
+    position: relative;
+    color: #fff;
+}
